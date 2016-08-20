@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Numeric Sequence Calculator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<form>
+			<input type="text" name="number" id="number" />
+			<button onclick="calc()" type="button">Calculate</button>
+			
+			<p>
+				Sequence Numbers: <span id="seqNums"></span>
+			</p>
+			
+			<p>
+				Odd Numbers: <span id="oddNums"></span>
+			</p>
+			
+			<p>
+				Even Numbers: <span id="evenNums"></span>
+			</p>
+			
+			<p>
+				Numbers not multiple of 3,5: <span id="notMultiOf3and5Nums"></span>
+			</p>
+			
+			<p>
+				Fibonacci Numbers: <span id="fibNums"></span>
+			</p>
+		</form>
+		<script src="numericSeqCalc.js"></script>
+		<script>
+			function calc() {
+				var input = document.getElementById('number');
+				
+				var seqNumsElem = document.getElementById('seqNums');
+				var seqNumsArr = numSeqCalc.seqNums(input.value);
+				if (seqNumsArr.error) {
+					seqNumsElem.innerHTML = 'Error: ' + seqNumsArr.error;
+				} else {
+					seqNumsElem.innerHTML = seqNumsArr.toString();
+				}
+				
+				var oddNumsElem = document.getElementById('oddNums');
+				var oddNumsArr = numSeqCalc.oddNums(input.value);
+				if (oddNumsArr.error) {
+					oddNumsElem.innerHTML = 'Error: ' + oddNumsArr.error;
+				} else {
+					oddNumsElem.innerHTML = oddNumsArr.toString();
+				}
+				
+				var evenNumsElem = document.getElementById('evenNums');
+				var evenNumsArr = numSeqCalc.evenNums(input.value);
+				if (evenNumsArr.error) {
+					evenNumsElem.innerHTML = 'Error: ' + evenNumsArr.error;
+				} else {
+					evenNumsElem.innerHTML = evenNumsArr.toString();
+				}
+				
+				var notMultiOf3and5NumsElem = document.getElementById('notMultiOf3and5Nums');
+				var notMultiOf3and5NumsArr = numSeqCalc.notMultiOf3and5Nums(input.value);
+				if (notMultiOf3and5NumsArr.error) {
+					notMultiOf3and5NumsElem.innerHTML = 'Error: ' + notMultiOf3and5NumsArr.error;
+				} else {
+					notMultiOf3and5NumsElem.innerHTML = notMultiOf3and5NumsArr.toString();
+				}
+				
+				var fibNumsElem = document.getElementById('fibNums');
+				var fibNumsArr = numSeqCalc.fibNums(input.value);
+				if (fibNumsArr.error) {
+					fibNumsElem.innerHTML = 'Error: ' + fibNumsArr.error;
+				} else {
+					fibNumsElem.innerHTML = fibNumsArr.toString();
+				}
+			}
+		</script>
+	</body>
+</html>

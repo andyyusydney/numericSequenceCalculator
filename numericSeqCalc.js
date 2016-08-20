@@ -1,7 +1,7 @@
 (function(root, undefined){
 		
 	function seqNums(n){
-		if ((n<0) && (parseInt(n) === n)) {
+		if ((n<0) || (parseInt(n) != n)) {
 			return {
 				error: 'Param should be positive number and integer.'
 			}
@@ -16,7 +16,7 @@
 	}
 	
 	function oddNums(n){
-		if ((n<0) && (parseInt(n) === n)) {
+		if ((n<0) || (parseInt(n) != n)) {
 			return {
 				error: 'Param should be positive number and integer.'
 			}
@@ -34,7 +34,7 @@
 	}
 	
 	function evenNums(n){
-		if ((n<0) && (parseInt(n) === n)) {
+		if ((n<0) || (parseInt(n) != n)) {
 			return {
 				error: 'Param should be positive number and integer.'
 			}
@@ -52,7 +52,7 @@
 	}
 	
 	function notMultiOf3and5Nums(n){
-		if ((n<0) && (parseInt(n) === n)) {
+		if ((n<0) || (parseInt(n) != n)) {
 			return {
 				error: 'Param should be positive number and integer.'
 			}
@@ -72,9 +72,9 @@
 	}
 	
 	function fibNums(n){
-		if ((n<0) && (parseInt(n) === n)) {
+		if ((n<0) || (parseInt(n) != n)) {
 			return {
-				error: 'n cannot be negative number'
+				error: 'Param should be positive number and integer.'
 			}
 		}
 		
