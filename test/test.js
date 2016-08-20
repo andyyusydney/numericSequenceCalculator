@@ -2,8 +2,6 @@ var assert = require('assert');
 var numericSeqCalc = require('../numericSeqCalc.js');
 var expect = require('chai').expect;
 
-console.log('numericSeqCalc=', numericSeqCalc);
-
 describe('Numeric Sequence Calculator', function(){
 	it('should return all numbers up to and including the number entered', function(){
 		expect(numericSeqCalc.seqNums(5)).to.have.members([1,2,3,4,5]);
@@ -23,5 +21,9 @@ describe('Numeric Sequence Calculator', function(){
 	
 	it('should return all fibonacci numbers up to and including the number entered', function(){
 		expect(numericSeqCalc.fibNums(5)).to.have.members([0,1,1,2,3,5]);
+	});
+	
+	it('should return error if not be passed a negative or decimal number', function(){
+		expect(numericSeqCalc.fibNums(-1)).have.keys(['error']);
 	});
 });
