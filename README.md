@@ -1,5 +1,5 @@
 # numericSequenceCalculator
-Numeric Sequence Calculator
+## Numeric Sequence Calculator
 1. All numbers up to and including the number entered;
 2. All odd numbers up to and including the number entered, 
 3. All even numbers up to and including the number entered, 
