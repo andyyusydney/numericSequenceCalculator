@@ -22,7 +22,7 @@
 			}
 		}
 		
-		var ret = []
+		var ret = [],
 			i = 1;
 			
 		while (i<=n) {
@@ -40,7 +40,7 @@
 			}
 		}
 		
-		var ret = []
+		var ret = [],
 			i = 0;
 			
 		while (i<=n) {
@@ -58,7 +58,7 @@
 			}
 		}
 		
-		var ret = []
+		var ret = [],
 			i = 1;
 			
 		while (i<=n) {
@@ -78,10 +78,10 @@
 			}
 		}
 		
-		var ret = [0,1]
-			sum = 0
-			a = 0
-			b = 1
+		var ret = [0,1],
+			sum = 0,
+			a = 0,
+			b = 1,
 			i = 2;
 			
 		if ((n >= 0) && (n < 2)) {
